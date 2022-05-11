@@ -285,24 +285,12 @@ function Post() {
         }}
         className="upvote_button"
         ><CgChevronDoubleUpR className="upvote_icon"/>{msg}</button>
-        <button style={styleDown} onClick={()=>{
-      if (msg === "Upvote" && msgD === "Downvote") {
-        downvote();
-      } else if (msg === "Upvote" && msgD === "Downvoted") {
-        undownvote();
-      } else if (msg === "Upvoted" && msgD === "Downvote") {
-        unupvote();
-        downvote();
-      }
-        }
-        }
-        className="upvote_button">
-          <CgChevronDoubleDownR className="upvote_icon"/>{msgD}</button>
+        
         </div>
       <div>
         <div className="upvote_number_container">
         <div  className="upvote_number">{upvotes} Upvotes </div>  
-        <div className="upvote_number">{downvotes} Downvotes</div>
+        
       </div>
       </div> 
       <form className="comment_form_container" action="">
@@ -310,7 +298,7 @@ function Post() {
            <div className="post_comment_container"><button className="post_comment_button" onClick={handleClick}><FaRegCommentDots className="upvote_icon"/> Respond</button></div>
          </form>
       
-      <div className="comment_number">{nocomments} Comments</div>
+      <div className="comment_number">{nocomments} Responses</div>
          <div>{
             comments.map(comm=>{
               
